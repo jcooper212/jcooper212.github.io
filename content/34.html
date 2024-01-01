@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Bootstrap Blog</title>
+    <title>Rayze Blog</title>
     <style>
         body {
             padding-top: 56px;
@@ -17,8 +17,37 @@
             }
         }
 
+        .blog-title {
+            text-align: left;
+            padding-left: 10px;
+            padding-top: 40px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            font-size: 2em; /* Adjust the font size as needed */
+            color: #333; /* Adjust the color as needed */
+            margin-bottom: 5px; /* Add margin at the bottom for spacing */
+        }
+        .blog-title2 {
+            text-align: left;
+            padding-left: 10px;
+            padding-top: 0px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: grey; /* Adjust the color as needed */
+            margin-bottom: 80px; /* Add margin at the bottom for spacing */
+        }
         .blog-post {
             margin-bottom: 40px;
+            border: 1px solid grey;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            box-shadow: 2px 2px 5px grey; /* Add a subtle shadow */
+            transition: box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
+        }
+        .blog-post:hover
+         {
+            box-shadow: 14px 14px 18px grey; /* Increase shadow on hover */
         }
 
         .blog-post img {
@@ -31,9 +60,10 @@
 <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Rayze Engineering</a>
+        <a class="navbar-brand"  href="#"> Rayze Engineering
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarCollapse" aria-ex     panded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -51,45 +81,72 @@
         </div>
     </nav>
 
+    <h1 class="blog-title">Engineering</h1>
+    <h5 class="blog-title2">Learnings & Stories from Rayze Engineering</h5>
+
+
     <div class="container mt-4">
 
         <div class="row">
             <div class="col-md-4">
-                <div class="blog-post">
-                    BLOGPOST1
+                <div>
+                    <a href="blog34.html" class="blog-post">
+                    <img src='BLOGPOST1.png' alt='Cover Image' class='img-fluid'>
+                    <h5>Practical Engineering with microservices</h5>
+                    <p style='color: gray;'>ai, microservices</p>
+                    </a>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="blog-post">
-                    BLOGPOST2
+                <div>
+                    <a href="blsh.html" class="blog-post">
+                    <img src='BLOGPOST1.png' alt='Cover Image' class='img-fluid'>
+                    <h5>Practical Engineering with microservices</h5>
+                    <p style='color: gray;'>ai, microservices</p>
+                    </a>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="blog-post">
-                    BLOGPOST3
-
+                <div>
+                    <a href="blsh.html" class="blog-post">
+                    <img src='BLOGPOST1.png' alt='Cover Image' class='img-fluid'>
+                    <h5>Practical Engineering with microservices</h5>
+                    <p style='color: gray;'>ai, microservices</p>
+                    </a>
                 </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-4">
-                <div class="blog-post">
-                    BLOGPOST4
+                <div>
+                    <a href="blsh.html" class="blog-post">
+                    <img src='BLOGPOST1.png' alt='Cover Image' class='img-fluid'>
+                    <h5>Practical Engineering with microservices</h5>
+                    <p style='color: gray;'>ai, microservices</p>
+                    </a>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="blog-post">
-                    BLOGPOST5
+                <div>
+                    <a href="blsh.html" class="blog-post">
+                    <img src='BLOGPOST1.png' alt='Cover Image' class='img-fluid'>
+                    <h5>Practical Engineering with microservices</h5>
+                    <p style='color: gray;'>ai, microservices</p>
+                    </a>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="blog-post">
-                    BLOGPOST6
+                <div>
+                    <a href="blsh.html" class="blog-post">
+                    <img src='BLOGPOST1.png' alt='Cover Image' class='img-fluid'>
+                    <h5>Practical Engineering with microservices</h5>
+                    <p style='color: gray;'>ai, microservices</p>
+                    </a>
                 </div>
             </div>
         </div>
