@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Rayze Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding-bottom: 10px;
+        }
+
+        header h1 {
+            padding-top: 80px
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        main {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        article h2 {
+            color: #333;
+            font-size: 2em;
+        }
+        article h6 {
+            color: gray;
+            font-size: 0.8em;
+        }
+
+        article p {
+            line-height: 1.6;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+        @media (max-width: 767.98px) {
+            body {
+                padding-top: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand"  href="#"> Rayze Engineering
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-ex     panded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1></h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>How we solved scaling of services with Kubernetes</h2>
+            <h6>Microservices, Engineering, Cloud</h6>
+            <p>
+
+As a senior engineering developer consultant, I recently worked on a project that required us to solve the challenge of scaling services from traditional hosting to a cloud platform. After researching the options, we decided to use Kubernetes as our container orchestration system of choice. In this blog post, I’ll share our journey to migrate our services to Kubernetes, and the benefits that we’ve seen.
+
+What is Kubernetes?
+
+Kubernetes is an open-source, container-orchestration system for automating the deployment, scaling, and management of containerized applications. It is designed to provide a platform for deploying and managing applications across multiple nodes, allowing for high availability and scalability.
+
+At its core, Kubernetes is a cluster management system. It allows us to deploy and manage applications across a cluster of nodes, each node running a containerized application. Kubernetes also provides a range of features that make it easy to manage and monitor the health of the cluster, including auto-scaling, self-healing, and rolling upgrades.
+
+Migrating Services to Kubernetes
+
+Migrating our services to Kubernetes was a complex process, but the results have been well worth the effort. We started by containerizing our services, allowing us to package and deploy them as Docker containers. This also allowed us to easily move our services to Kubernetes without having to modify code.
+
+Once our services were containerized, we used Kubernetes to deploy and manage them. This allowed us to easily scale our services, as Kubernetes automatically creates additional replicas of our services when demand increases.
+
+We also used Kubernetes to implement a range of best practices, such as zero-downtime deployments, rolling updates, and self-healing. This has allowed us to confidently deploy and manage our services, knowing that Kubernetes will automatically take care of any issues that arise.
+
+Benefits of Kubernetes
+
+Using Kubernetes has allowed us to easily scale our services, while also ensuring high availability and reliability. We’ve also seen a significant reduction in operational overhead, as Kubernetes takes care of all the heavy lifting for us.
+
+Kubernetes has also allowed us to quickly and easily deploy new services, without needing to manually configure and manage servers. This has allowed us to rapidly roll out new features and services, without having to worry about the underlying infrastructure.
+
+Finally, Kubernetes has enabled us to focus on developing our services, instead of worrying about the operational overhead. This has allowed us to move faster and deliver better services to our customers.
+
+Conclusion
+
+Migrating to Kubernetes has allowed us to easily scale our services, while also ensuring high availability and reliability. We’ve also seen a significant reduction in operational overhead, as Kubernetes takes care of all the heavy lifting for us. Finally, Kubernetes has allowed us to focus on developing our services, instead of worrying about the underlying infrastructure. Overall, we’re very pleased with the results, and we’re looking forward to continuing to leverage Kubernetes to deliver better services to our customers.</p>
+        </article>
+
+        <!-- More articles can be added here -->
+    </main>
+
+    <footer>
+        &copy; Rayze Engineering. All rights reserved.
+    </footer>
+</body>
+</html>
