@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Rayze Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding-bottom: 10px;
+        }
+
+        header h1 {
+            padding-top: 80px
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        main {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        article h2 {
+            color: #333;
+            font-size: 2em;
+        }
+        article h6 {
+            color: gray;
+            font-size: 0.8em;
+        }
+
+        article p {
+            line-height: 1.6;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+        @media (max-width: 767.98px) {
+            body {
+                padding-top: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand"  href="#"> Rayze Engineering
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-ex     panded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1></h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Building out a data platform on the cloud</h2>
+            <h6>Data Engineering, Big Data, Data computation</h6>
+            <p>
+
+<h1>Building out a data platform on the cloud</h1>
+<h2>A case study of a senior engineering developer consultant</h2>
+
+<p>In this blog post, I will discuss the approach taken, plan, data migration, obstacles and challenges of data pipelines and orchestration faced by me while building out a cloud based big data solution for a client. The platform was built using Azure, Databricks, Airflow and Power BI for reporting. The client had previously been using an on-prem Oracle system but decided to migrate to this new platform. I will discuss the benefits of the platform and the process of this successful migration.</p>
+
+<h2>The Approach</h2>
+
+<p>The goal was to create a data platform that would provide the client with access to the right data at the right time. This required a comprehensive approach that involved understanding the client’s current infrastructure and what their data requirements were. To ensure a successful migration, I had to accurately assess the resources needed to build the data platform, identify the right technology to use, and ensure a smooth transition from the old system to the new one.</p>
+
+<h3>Planning</h3>
+
+<p>The first step was to understand the client’s current infrastructure and data requirements. This involved analyzing the data sources, understanding the data types and formats, and the data transformation requirements. Once the data requirements were understood, I was able to identify the right tools and technologies to use for the data platform. The tools used included Azure, Databricks, Airflow and Power BI, all of which are cloud-based solutions.</p>
+
+<h3>Data Migration</h3>
+
+<p>Once the tools were identified, the next step was to migrate the data from the on-prem Oracle system to the cloud platform. This involved creating an ETL (extract, transform, and load) process to move the data from the on-prem system to the cloud platform. To do this, I used Azure Data Factory, which allowed me to quickly and easily move the data from the source to the destination. The data was then loaded into the cloud platform using Databricks and Airflow.</p>
+
+<h3>Data Pipelines and Orchestration</h3>
+
+<p>Once the data was loaded into the cloud platform, I had to create data pipelines and orchestrate them to ensure that the data was processed correctly. To do this, I used Airflow, which allowed me to create and manage data pipelines. I also used Databricks to process the data and created custom code to ensure that the data was transformed correctly and enriched with additional data.</p>
+
+<h3>Power BI for Reporting</h3>
+
+<p>The last step was to create a reporting system to allow the client to access the data. To do this, I used Power BI, which allowed me to create interactive reports and dashboards. This provided the client with the ability to quickly and easily access the data that they needed.</p>
+
+<h2>Benefits of the Platform</h2>
+
+<p>The platform provided the client with a number of benefits. Firstly, the cloud-based platform allowed them to access their data from anywhere, at any time. This provided them with greater flexibility and allowed them to make data-driven decisions faster. Secondly, the platform allowed for faster data processing, as the data was processed in the cloud instead of on-prem. Thirdly, the platform allowed for scalability, as the client could easily add more data sources or increase their data processing capacity. Finally, the platform provided the client with access to powerful analytics and reporting tools, such as Power BI, which allowed them to make more informed decisions.</p>
+
+<h2>Conclusion</h2>
+
+<p>Migrating from an on-prem system to a cloud-based platform was a challenging task, but it provided the client with a number of benefits. The platform allowed them to access their data from anywhere, process data faster, and access powerful analytics and reporting tools. By utilizing the right tools and technologies, I was able to successfully build out a data platform that met the client’s needs.</p></p>
+        </article>
+
+        <!-- More articles can be added here -->
+    </main>
+
+    <footer>
+        &copy; Rayze Engineering. All rights reserved.
+    </footer>
+</body>
+</html>
