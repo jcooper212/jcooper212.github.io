@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Rayze Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding-bottom: 10px;
+        }
+
+        header h1 {
+            padding-top: 80px
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        main {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        article h2 {
+            color: #333;
+            font-size: 1.5em;
+        }
+        article h6 {
+            color: gray;
+            font-size: 0.8em;
+        }
+
+        article p {
+            line-height: 1.6;
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+        @media (max-width: 767.98px) {
+            body {
+                padding-top: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand"  href="#"> Rayze Engineering
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-ex     panded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1></h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Building out a data platform on the cloud</h2>
+            <h6>Data Engineering, Big Data, Data computation</h6>
+            <br/><br/>
+            <p>
+
+<h2>Building out a Data Platform on the Cloud</h2>
+
+<p>I recently had the pleasure of leading a project to re-engineer a complex, on-premise Java platform and move it to the cloud. The project was challenging, and I experienced a lot of highs and lows on the way. In the end, the project was a success, and I learnt a great deal about the process of cloud migration.</p>
+
+<p>The original platform was a monolith, so the first step was to break it down into smaller microservices. To do this, we used Docker containers, and deployed them to a Kubernetes cluster. This allowed us to quickly spin up and manage the individual services, and provided us with more control over the environment.</p>
+
+<p>We then took advantage of Azure services to provide us with the necessary infrastructure. We created a virtual network, configured our DNS, and set up a secure connection between the on-premises environment and the cloud. This enabled us to securely transfer data between the two environments.</p>
+
+<p>Security was a major concern, so we implemented authentication and authorization mechanisms to ensure that only authorized users could access the system. We also implemented monitoring to track the performance and usage of the platform, and alert us in case of any anomalies.</p>
+
+<p>The next step was to migrate the data from the on-premises Oracle database to the cloud. This was quite challenging because of the sheer amount of data that had to be transferred. We used a combination of Azure Data Factory and Data Lake to efficiently move the data over. We also took advantage of the Data Factory's orchestration capabilities to automate the migration process.</p>
+
+<p>Once the data was migrated, we built a new cloud-based big data solution based on Azure, Databricks, Airflow and Power BI for reporting. This allowed us to quickly analyze the data and gain insights into the system. We also used Airflow to manage the data pipelines and orchestrate the system.</p>
+
+<p>Finally, we went live with the new system. We faced a few challenges during the process, but with the help of our team and the right technology, we were able to complete the migration from on-premises Oracle to the cloud-based platform.</p>
+
+<p>The end result was a highly efficient, secure and cost-effective data platform. It was a great success, and I'm proud of the work we put in to make it happen. The end users now have access to a powerful platform that helps them make informed decisions.</p>
+
+<p>The process of cloud migration can be challenging, but with the right approach and the right technology, it can be a great success. I'm grateful for the opportunity to have worked on this project, and I'm excited to see what the future holds for cloud-based data platforms.</p></p>
+        </article>
+
+        <!-- More articles can be added here -->
+    </main>
+
+    <footer>
+        &copy; Rayze Engineering. All rights reserved.
+    </footer>
+</body>
+</html>
