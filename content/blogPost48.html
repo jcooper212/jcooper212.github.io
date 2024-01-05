@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Rayze Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding-bottom: 10px;
+        }
+
+        header h1 {
+            padding-top: 80px
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        main {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        article h2 {
+            color: #333;
+            font-size: 1.5em;
+        }
+        article h6 {
+            color: gray;
+            font-size: 0.8em;
+        }
+
+        article p {
+            line-height: 1.6;
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+        @media (max-width: 767.98px) {
+            body {
+                padding-top: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand"  href="#"> Rayze Engineering
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-ex     panded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1></h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Building out a data platform on the cloud</h2>
+            <h6>Data Engineering, Big Data, Data computation</h6>
+            <br/><br/>
+            <p>
+
+<h1>Building out a data platform on the cloud</h1>
+
+<p>As a senior engineering developer consultant, I was tasked with building out a new cloud-based big data solution based on Azure, Databricks, Airflow and Power BI for reporting and to complete the migration from on-premise Oracle to this new platform. In this blog post, I will discuss the approach, plan, data migration, and the various challenges encountered in building out this new data platform.</p>
+
+<h2>The Approach</h2>
+
+<p>Before we started the project, we had to decide on an approach. We decided to use a combination of Azure, Databricks, Airflow, and Power BI for our data platform. We felt that Azure provided the flexibility and scalability needed to handle large amounts of data. We also chose Databricks because it is an open-source platform that integrates with the other tools we were using. Airflow was chosen to handle the data pipelines and orchestration, and Power BI was chosen for reporting and analytics.</p>
+
+<h2>Data Migration</h2>
+
+<p>To complete the migration from on-premise Oracle to the new platform, we had to move the data from the Oracle database to Azure. We wrote a custom script to export the data from Oracle and then used Azure Data Factory to move the data to Azure. We also used Azure Data Lake Storage to store the data. Once the data was in Azure, we used Databricks to transform the data and get it into the desired format.</p>
+
+<h2>Data Pipelines and Orchestration</h2>
+
+<p>To handle the data pipelines and orchestration, we used Airflow. Airflow allowed us to easily automate the data pipelines and set up orchestrations for the different data sources. We wrote custom scripts to load data from various sources into the data lake and then used Airflow to orchestrate the process. This allowed us to easily monitor and manage the data pipelines.</p>
+
+<h2>Benefits of the Platform</h2>
+
+<p>We found that the combination of Azure, Databricks, Airflow, and Power BI provided us with a highly scalable and flexible data platform. It allowed us to easily move data from the on-premise Oracle database to Azure, and then use Databricks and Airflow to transform and orchestrate the data. It also allowed us to easily set up data pipelines and orchestration. Finally, we were able to use Power BI to easily create reports and visualizations.</p>
+
+<p>Overall, the new data platform we built on Azure, Databricks, Airflow and Power BI was a success. We were able to easily migrate the data from Oracle to Azure, and then use Databricks and Airflow for data transformation and orchestration. We were also able to use Power BI for reporting and analytics. This new data platform will provide us with the flexibility and scalability we need to handle large amounts of data.</p></p>
+        </article>
+
+        <!-- More articles can be added here -->
+    </main>
+
+    <footer>
+        &copy; Rayze Engineering. All rights reserved.
+    </footer>
+</body>
+</html>
