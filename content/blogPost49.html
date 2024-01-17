@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Rayze Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding-bottom: 10px;
+        }
+
+        header h1 {
+            padding-top: 80px
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        main {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        article h2 {
+            color: #333;
+            font-size: 1.5em;
+        }
+        article h6 {
+            color: gray;
+            font-size: 0.8em;
+        }
+
+        article p {
+            line-height: 1.6;
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+        @media (max-width: 767.98px) {
+            body {
+                padding-top: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand"  href="#"> Rayze Engineering
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-ex     panded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1></h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Building out a data platform on the cloud</h2>
+            <h6>Data Engineering, Big Data, Data computation</h6>
+            <br/><br/>
+            <p>
+
+<h1>Building out a data platform on the cloud</h1>
+
+<p>In today's digital age, data is the driving force behind businesses and organizations. The ability to collect, store, and analyze large amounts of data has become crucial for making informed decisions and gaining a competitive edge. As a programmer, it is important to have a strong understanding of data engineering and the tools and technologies needed to build and manage a data platform.</p>
+
+<p>In this blog post, we will walk through the process of building a data platform on the cloud using Python, Spark, Airflow, HDFS, and Hive. We will cover the steps of ingesting 12 feeds, designing a data model, and orchestrating complex dependencies. Then, we will implement this on the cloud using an HDFS/Spark platform. Let's dive in!</p>
+
+<h2>Step 1: Ingesting 12 Feeds</h2>
+
+<p>The first step in building a data platform is to ingest data from various sources. In this project, we will be ingesting 12 feeds, which means we will be collecting data from 12 different sources. This could include data from databases, APIs, or even real-time streaming data. The key is to ensure that all the data is collected and stored in a centralized location for further processing.</p>
+
+<p>To ingest the 12 feeds, we will be using Python and the PySpark library. PySpark is an open-source framework that provides a Python API for Apache Spark, a powerful analytics engine for large-scale data processing. It allows us to write code in Python and still leverage the capabilities of Spark.</p>
+
+<p>Let's take a look at the code for ingesting the 12 feeds:</p>
+
+<pre><code># Import necessary libraries
+import pyspark
+from pyspark.sql import SparkSession
+
+# Create a Spark session
+spark = SparkSession.builder.master("local").appName("Data Platform").getOrCreate()
+
+# Define the paths for the 12 feeds
+feed1_path = "s3://bucket/feed1"
+feed2_path = "s3://bucket/feed2"
+feed3_path = "s3://bucket/feed3"
+...
+feed12_path = "s3://bucket/feed12"
+
+# Read the 12 feeds into Spark dataframes
+feed1_df = spark.read.format("csv").option("header", "true").load(feed1_path)
+feed2_df = spark.read.format("json").load(feed2_path)
+feed3_df = spark.read.format("parquet").load(feed3_path)
+...
+feed12_df = spark.read.format("avro").load(feed12_path)
+
+# Union all the dataframes to create a single dataframe
+all_feeds_df = feed1_df.union(feed2_df).union(feed3_df).union(...)feed12_df
+
+# Write the dataframe to HDFS
+all_feeds_df.write.format("parquet").mode("overwrite").save("hdfs://path/to/save/all_feeds")
+</code></pre>
+
+<p>In the above code, we first import the necessary libraries, create a Spark session, and define the paths for the 12 feeds. Then, we use the <code>spark.read.format()</code> method to read each feed into a Spark dataframe. Once all the dataframes are created, we use the <code>union()</code> method to merge them into a single dataframe. Finally, we use the <code>write</code> method to save the dataframe to HDFS in the Parquet format.</p>
+
+<p>This process can be repeated for each of the 12 feeds, and the data will be stored in HDFS for further processing.</p>
+
+<h2>Step 2: Designing a Data Model</h2>
+
+<p>Before we can start processing the data, we need to design a data model. A data model is a visual representation of how the data will be organized and stored in the data platform. It helps us understand the relationships between different data entities and enables efficient data retrieval and analysis.</p>
+
+<p>To design our data model, we will be using Hive. Hive is a data warehouse infrastructure that provides an SQL-like interface for querying and managing data stored in HDFS. It allows us to create tables, define schemas, and perform SQL queries on the data.</p>
+
+<p>Let's take a look at the code for creating a data model in Hive:</p>
+
+<pre><code># Import PyHive library
+from pyhive import hive
+
+# Create a Hive connection
+conn = hive.Connection(host="host", port=10000, username="username", database="database")
+
+# Create a cursor
+cursor = conn.cursor()
+
+# Create a table for feed1
+cursor.execute("CREATE TABLE IF NOT EXISTS feed1 (column1 STRING, column2 INT, column3 DATE)")
+
+# Create a table for feed2
+cursor.execute("CREATE TABLE IF NOT EXISTS feed</p>
+        </article>
+
+        <!-- More articles can be added here -->
+    </main>
+
+    <footer>
+        &copy; Rayze Engineering. All rights reserved.
+    </footer>
+</body>
+</html>
